@@ -1,0 +1,33 @@
+{
+  "trainer": [
+    { "userId": 1, "firstName": "Ann",    "lastName": "Lee",    "password": "pass1234", "isActive": true,  "specialization": "Yoga" },
+    { "userId": 2, "firstName": "Marcus", "lastName": "Cole",   "password": "pass2345", "isActive": true,  "specialization": "Strength" },
+    { "userId": 3, "firstName": "Sofia",  "lastName": "Reyes",  "password": "pass3456", "isActive": true,  "specialization": "Cardio" },
+    { "userId": 4, "firstName": "David",  "lastName": "Kim",    "password": "pass4567", "isActive": false, "specialization": "Crossfit" },
+    { "userId": 5, "firstName": "Laura",  "lastName": "Petit",  "password": "pass5678", "isActive": true,  "specialization": "Pilates" }
+  ],
+  "trainee": [
+    { "userId": 1, "firstName": "Tom",     "lastName": "Ray",      "password": "tr1111", "isActive": true,  "dateOfBirth": "1995-04-12", "address": "12 Oak Street, Medellín" },
+    { "userId": 2, "firstName": "Valeria", "lastName": "Gómez",    "password": "tr2222", "isActive": true,  "dateOfBirth": "1991-09-30", "address": "45 Laureles Avenue, Medellín" },
+    { "userId": 3, "firstName": "Carlos",  "lastName": "Mejía",    "password": "tr3333", "isActive": true,  "dateOfBirth": "1988-01-17", "address": "8 El Poblado Road, Medellín" },
+    { "userId": 4, "firstName": "Emma",    "lastName": "Stone",    "password": "tr4444", "isActive": true,  "dateOfBirth": "2000-06-05", "address": "77 Pine Lane, Envigado" },
+    { "userId": 5, "firstName": "Lucas",   "lastName": "Ortiz",    "password": "tr5555", "isActive": false, "dateOfBirth": "1983-11-22", "address": "3 Sabaneta Plaza, Sabaneta" },
+    { "userId": 6, "firstName": "Nina",    "lastName": "Patel",    "password": "tr6666", "isActive": true,  "dateOfBirth": "1997-02-28", "address": "19 Maple Court, Itagüí" },
+    { "userId": 7, "firstName": "Andrés",  "lastName": "Restrepo", "password": "tr7777", "isActive": true,  "dateOfBirth": "1993-08-14", "address": "60 Calle 10, Medellín" },
+    { "userId": 8, "firstName": "Julia",   "lastName": "Novak",    "password": "tr8888", "isActive": true,  "dateOfBirth": "1999-12-01", "address": "5 Birch Road, Bello" }
+  ],
+  "training": [
+    { "id": 1,  "traineeId": 1, "trainerId": 1, "trainerName": "Ann Lee",      "trainingType": "YOGA",     "trainingDate": "2025-03-03", "trainingDuration": 1.0 },
+    { "id": 2,  "traineeId": 2, "trainerId": 1, "trainerName": "Ann Lee",      "trainingType": "YOGA",     "trainingDate": "2025-03-04", "trainingDuration": 1.5 },
+    { "id": 3,  "traineeId": 3, "trainerId": 2, "trainerName": "Marcus Cole",  "trainingType": "STRENGTH", "trainingDate": "2025-03-05", "trainingDuration": 1.0 },
+    { "id": 4,  "traineeId": 4, "trainerId": 3, "trainerName": "Sofia Reyes",  "trainingType": "CARDIO",   "trainingDate": "2025-03-06", "trainingDuration": 0.75 },
+    { "id": 5,  "traineeId": 1, "trainerId": 2, "trainerName": "Marcus Cole",  "trainingType": "STRENGTH", "trainingDate": "2025-03-10", "trainingDuration": 1.25 },
+    { "id": 6,  "traineeId": 5, "trainerId": 4, "trainerName": "David Kim",    "trainingType": "CROSSFIT", "trainingDate": "2025-03-11", "trainingDuration": 1.0 },
+    { "id": 7,  "traineeId": 6, "trainerId": 5, "trainerName": "Laura Petit",  "trainingType": "PILATES",  "trainingDate": "2025-03-12", "trainingDuration": 1.0 },
+    { "id": 8,  "traineeId": 7, "trainerId": 3, "trainerName": "Sofia Reyes",  "trainingType": "CARDIO",   "trainingDate": "2025-03-13", "trainingDuration": 0.5 },
+    { "id": 9,  "traineeId": 8, "trainerId": 1, "trainerName": "Ann Lee",      "trainingType": "YOGA",     "trainingDate": "2025-03-14", "trainingDuration": 1.0 },
+    { "id": 10, "traineeId": 2, "trainerId": 5, "trainerName": "Laura Petit",  "trainingType": "PILATES",  "trainingDate": "2025-03-17", "trainingDuration": 1.5 },
+    { "id": 11, "traineeId": 3, "trainerId": 3, "trainerName": "Sofia Reyes",  "trainingType": "CARDIO",   "trainingDate": "2025-03-18", "trainingDuration": 0.75 },
+    { "id": 12, "traineeId": 4, "trainerId": 2, "trainerName": "Marcus Cole",  "trainingType": "STRENGTH", "trainingDate": "2025-03-19", "trainingDuration": 1.0 }
+  ]
+}

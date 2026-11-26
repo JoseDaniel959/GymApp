@@ -1,0 +1,8 @@
+/home/daniel/epam-repositories/GymApp/src/test/java/com/mycompany/GymApp/AppTest.java
+/home/daniel/epam-repositories/GymApp/src/test/java/com/mycompany/GymApp/DAO/TraineeDaoTest.java
+/home/daniel/epam-repositories/GymApp/src/test/java/com/mycompany/GymApp/DAO/TrainerDaoTest.java
+/home/daniel/epam-repositories/GymApp/src/test/java/com/mycompany/GymApp/DAO/TrainingDaoTest.java
+/home/daniel/epam-repositories/GymApp/src/test/java/com/mycompany/GymApp/Service/TraineeServiceTest.java
+/home/daniel/epam-repositories/GymApp/src/test/java/com/mycompany/GymApp/Service/TrainerServiceTest.java
+/home/daniel/epam-repositories/GymApp/src/test/java/com/mycompany/GymApp/model/TrainingTest.java
+/home/daniel/epam-repositories/GymApp/src/test/java/com/mycompany/GymApp/model/users/TraineeTest.java
