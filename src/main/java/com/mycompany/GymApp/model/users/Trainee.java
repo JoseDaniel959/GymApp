@@ -1,40 +1,40 @@
 package com.mycompany.GymApp.model.users;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Trainee extends User {
+import com.mycompany.GymApp.model.Training;
 
-    private LocalDate DateOfBirth;
-    private String Address;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 
-    public Trainee(Long userId, String firstName, String lastName,String username, String password, Boolean isActive, LocalDate dateOfBirth,
-            String address) {
-        super(userId, firstName, lastName,username, password, isActive);
-        this.DateOfBirth = dateOfBirth;
-        this.Address = address;
-    }
+@Entity
+public class Trainee {
 
-    public LocalDate getDatteOfBirth() {
-        return DateOfBirth;
-    }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  
+    Long id;
 
-    public void setDatteOfBirth(LocalDate datteOfBirth) {
-        DateOfBirth = datteOfBirth;
-    }
+    @Column(nullable = true)
+    LocalDate DateOfBith;
 
-    public String getAddress() {
-        return Address;
-    }
+    @Column(nullable = true)
+    String address;
 
-    public void setAddress(String address) {
-        Address = address;
-    }
+    @OneToOne
+    User user;
 
-    @Override
-    public String toString() {
-        return "Trainee [DateOfBirth=" + DateOfBirth + ", Address=" + Address + ", getUserId()=" + getUserId()
-                + ", getFirstName()=" + getFirstName() + ", getLastName()=" + getLastName() + ", getPassWord()="
-                + getPassWord() + ", getIsActive()=" + getIsActive() + "]";
-    }
+    @ManyToMany(mappedBy = "trainees")
+    List<Trainer> trainers;
+
+    @OneToMany(mappedBy = "trainingType")
+    List<Training> trainings;
 
 }

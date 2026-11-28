@@ -1,22 +1,47 @@
 package com.mycompany.GymApp.model.users;
 
-public class Trainer extends User {
-    private String Specialization;
+import java.util.ArrayList;
+import java.util.List;
 
-    public Trainer(
-        Long userId, String firstName, String lastName, String userName, String password, Boolean isActive, 
-            String specialization) {
-        super(userId,firstName, lastName,userName,password, isActive);
-        this.Specialization = specialization;
-    }
+import com.mycompany.GymApp.model.Training;
+import com.mycompany.GymApp.model.TrainingType;
 
- 
-    public String getSpecialization() {
-        return Specialization;
-    }
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 
-    public void setSpecialization(String specialization) {
-        Specialization = specialization;
-    }
+@Entity
+public class Trainer {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
+
+    @OneToOne 
+    User user;
+
+    @ManyToOne
+    @JoinColumn(name = "specialization_id")
+    List<TrainingType> Specialization;
+
+    @ManyToMany 
+    @JoinTable(
+        name = "trainerXTrainee",
+        joinColumns = @JoinColumn(name = "trainer_id"),
+        inverseJoinColumns = @JoinColumn(name = "trainee_id")
+    )
+    List<Trainee> trainees;
+
+    @OneToMany(mappedBy = "trainingType")
+    List<Training> trainings; 
+
+
 
 }

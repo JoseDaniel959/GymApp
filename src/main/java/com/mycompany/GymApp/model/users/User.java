@@ -1,68 +1,37 @@
 package com.mycompany.GymApp.model.users;
 
-public abstract class User {
-    private Long UserId;
-    private String FirstName;
-    private String LastName;
-    private String Username;
-    private String PassWord;
-    private Boolean isActive;
+import org.hibernate.annotations.GeneratedColumn;
 
-    public User(Long userId, String firstName, String lastName, String username, String passWord, Boolean isActive) {
-        UserId = userId;
-        FirstName = firstName;
-        LastName = lastName;
-        Username = username;
-        PassWord = passWord;
-        this.isActive = isActive;
-    }
+import jakarta.persistence.Column;
+import jakarta.persistence.DiscriminatorColumn;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.GenerationType;
 
-    public Long getUserId() {
-        return UserId;
-    }
+import jakarta.persistence.Inheritance;
 
-    public void setUserId(Long userId) {
-        UserId = userId;
-    }
+@Entity 
+public class User {
 
-    public String getFirstName() {
-        return FirstName;
-    }
+    @Id 
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    Long id;
 
-    public void setFirstName(String firstName) {
-        FirstName = firstName;
-    }
+    @Column(nullable = false)
+    String FirstName;
+    
+    @Column(nullable = false)
+    String lastName;
+    
+    @Column(nullable = false)
+    String username;
 
-    public String getLastName() {
-        return LastName;
-    }
+    @Column(nullable = false)
+    Boolean isActive;
 
-    public void setLastName(String lastName) {
-        LastName = lastName;
-    }
 
-    public String getUsername() {
-        return Username;
-    }
 
-    public void setUsername(String username) {
-        Username = username;
-    }
-
-    public String getPassWord() {
-        return PassWord;
-    }
-
-    public void setPassWord(String passWord) {
-        PassWord = passWord;
-    }
-
-    public Boolean getIsActive() {
-        return isActive;
-    }
-
-    public void setIsActive(Boolean isActive) {
-        this.isActive = isActive;
-    }
+    
 
 }
