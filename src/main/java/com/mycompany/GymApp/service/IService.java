@@ -1,7 +1,5 @@
 package com.mycompany.GymApp.service;
 
-import com.mycompany.GymApp.DTO.TraineeDTO;
-
 public interface IService<T> {
     T select(Long id);
 
