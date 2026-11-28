@@ -14,24 +14,4 @@ import com.mycompany.GymApp.model.users.Trainer;
 @ComponentScan(basePackages = "com.mycompany")
 public class AppConfig {
 
-    @Bean
-    public HashMap<Long, Trainee> traineeMemory() {
-        return new HashMap<Long, Trainee>();
-    }
-
-    @Bean
-    public HashMap<Long, Trainer> trainerMemory() {
-        return new HashMap<Long, Trainer>();
-    }
-
-    @Bean
-    public HashMap<Long, Training> trainingMemory() {
-        return new HashMap<Long, Training>();
-    }
-
-    @Bean
-    public static CustomProcessor customProcessor() {
-        return new CustomProcessor();
-    }
-
 }
